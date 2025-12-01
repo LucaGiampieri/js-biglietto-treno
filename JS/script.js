@@ -38,6 +38,21 @@ const priceForKM = 0.21;
     const price = (priceForKM * userKM);
     console.log(price);
 
+    //calcoliamo il prezzo in base all'età
+    //se l'user è minorenne
+    if (userAge < 18 ) {
+        finalPrice = price - (price / 100 * 20);
+    }
 
+    //se 'user è over65
+    else if (userAge > 65) {
+        finalPrice = price - (price / 100 * 40);
+    }
+
+    //se l'user è maggiorone, ma under 65
+    else {
+        finalPrice = price;
+    }
 
 //OUTPUT
+console.log(finalPrice);
