@@ -34,7 +34,9 @@ const priceForKM = 0.21;
     console.log(userKM);
 
 //ELABORAZIONE
-    //calcoliamo il prezzo per km
+    //calcoliamo il prezzo totale parziale in base ai km
+    const price = (priceForKM * userKM);
+    console.log(price);
 
 
 
