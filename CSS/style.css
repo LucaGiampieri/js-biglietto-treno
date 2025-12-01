@@ -1,0 +1,37 @@
+body {
+    background-color: black;
+    font-size: 45px;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: gray;
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 10px;
+    margin-top: 100px;
+}
+
+.title {
+    font-size: 50px;
+}
+
+#user-age {
+   background-color: darkgray;
+    padding: 30px 10px;
+}
+
+#user-km {
+   background-color: gainsboro;
+    padding: 30px 10px;
+}
+
+#final-price {
+    padding: 50px 10px;
+    font-size: 50px;
+    background-color: aliceblue;
+    font-weight: 900;
+}
