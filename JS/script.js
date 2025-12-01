@@ -55,4 +55,4 @@ const priceForKM = 0.21;
     }
 
 //OUTPUT
-console.log(finalPrice);
+console.log(finalPrice.toFixed(2));
