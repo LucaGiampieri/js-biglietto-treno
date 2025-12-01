@@ -27,32 +27,35 @@ const priceForKM = 0.21;
 //INPUT (variabili e dati di ingersso)
     //chiediamo all'use la sua età
     const userAge = parseInt(prompt('Inserisci i tuoi anni'));
-    console.log(userAge);
+    console.log('La tua età è di ', userAge, ' anni.' );
+    document.getElementById("user-age").innerHTML = 'La tua età è di ' + userAge + ' anni.';
+
     
     //chiediamo all'user i km che dovrà percorrere
     const userKM = parseInt(prompt('Inserisci i Km che dovrai percorrere'));
-    console.log(userKM);
+    console.log('Dovrai percorrere ', userKM, ' Km.');
+    document.getElementById("user-km").innerHTML = 'Dovrai percorrere ' + userKM + ' Km.';
 
 //ELABORAZIONE
     //calcoliamo il prezzo totale parziale in base ai km
     const price = (priceForKM * userKM);
-    console.log(price);
 
     //calcoliamo il prezzo in base all'età
     //se l'user è minorenne
     if (userAge < 18 ) {
-        finalPrice = price - (price / 100 * 20);
+        finalPrice = (price - (price / 100 * 20)).toFixed(2);
     }
 
     //se 'user è over65
     else if (userAge > 65) {
-        finalPrice = price - (price / 100 * 40);
+        finalPrice =  (price - (price / 100 * 40)).toFixed(2);
     }
 
     //se l'user è maggiorone, ma under 65
     else {
-        finalPrice = price;
+        finalPrice = (price).toFixed(2);
     }
 
 //OUTPUT
-console.log(finalPrice.toFixed(2));
+console.log(`Il prezzo del tuo biglietto è `, finalPrice,  ` €.`);
+document.getElementById("final-price").innerHTML = `Il prezzo del tuo biglietto è ` + finalPrice +  ` €.`;
