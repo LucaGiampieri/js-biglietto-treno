@@ -47,7 +47,7 @@ const priceForKM = 0.21;
     }
 
     //se 'user è over65
-    else if (userAge > 65) {
+    else if (userAge >= 65) {
         finalPrice =  (price - (price / 100 * 40)).toFixed(2);
     }
 
